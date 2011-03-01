@@ -51,7 +51,6 @@ au FocusLost * :wa
 "set guifont=Monaco:h14
 set go-=T
 set bg=dark
-let g:molokai_original = 0
+let g:molokai_original = 1
 set t_Co=256
 colorscheme molokai
-
