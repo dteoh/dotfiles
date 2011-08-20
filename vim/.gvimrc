@@ -48,7 +48,7 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 au FocusLost * :wa
 
-set guifont=Menlo:h13
+set guifont=Menlo:h12
 set go-=T
 if has('gui_running')
     set background=dark
