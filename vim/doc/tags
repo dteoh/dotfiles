@@ -101,12 +101,15 @@ SourceLookupInteractive	clojure.txt	/*SourceLookupInteractive*
 SourceLookupWord	clojure.txt	/*SourceLookupWord*
 StartLocalRepl	clojure.txt	/*StartLocalRepl*
 StartRepl	clojure.txt	/*StartRepl*
+\\	commentary.txt	/*\\\\*
+\\\	commentary.txt	/*\\\\\\*
 ack	ack.txt	/*ack*
 ack-author	ack.txt	/*ack-author*
 ack.txt	ack.txt	/*ack.txt*
 aw	clojure.txt	/*aw*
 clj-nailgun-server	clojure.txt	/*clj-nailgun-server*
 clojure.vim	clojure.txt	/*clojure.vim*
+commentary.txt	commentary.txt	/*commentary.txt*
 config/rails.vim	rails.txt	/*config\/rails.vim*
 delimitMate	delimitMate.txt	/*delimitMate*
 delimitMate#JumpAny()	delimitMate.txt	/*delimitMate#JumpAny()*
@@ -310,4 +313,5 @@ sR	clojure.txt	/*sR*
 si	clojure.txt	/*si*
 sr	clojure.txt	/*sr*
 sw	clojure.txt	/*sw*
+v_\\	commentary.txt	/*v_\\\\*
 vimclojure.txt	clojure.txt	/*vimclojure.txt*
