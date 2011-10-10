@@ -1,9 +1,25 @@
+set nocompatible
 filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+" Editor enhancements
+Bundle 'ack.vim'
+Bundle 'commentary.vim'
+Bundle 'delimitMate.vim'
+
+" Programming languages and frameworks
+Bundle 'VimClojure'
+Bundle 'rails.vim'
+Bundle 'tpope/vim-haml'
+
 filetype plugin indent on
 
 set modelines=0
 
-set nocompatible
 set autoindent
 set smartindent
 set showmatch
