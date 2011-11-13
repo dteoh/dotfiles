@@ -16,6 +16,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'VimClojure'
 Bundle 'rails.vim'
 Bundle 'tpope/vim-haml'
+Bundle 'vim-ruby/vim-ruby'
 
 filetype plugin indent on
 
