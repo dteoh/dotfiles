@@ -16,7 +16,7 @@ Bundle 'scrooloose/nerdtree'
 " Programming languages and frameworks
 Bundle 'VimClojure'
 Bundle 'vim-coffee-script'
-Bundle 'rails.vim'
+Bundle 'tpope/vim-rails'
 Bundle 'html5.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-haml'
