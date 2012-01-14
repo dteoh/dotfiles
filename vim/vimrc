@@ -47,6 +47,7 @@ set expandtab
 set wrap
 set textwidth=79
 set formatoptions=qrn1
+" >= version 7.3 only
 "set colorcolumn=85
 
 nnoremap <up> <nop>
@@ -76,14 +77,12 @@ nnoremap <leader>t :NERDTreeToggle<CR>
 au FocusLost * :wa
 
 set guifont=Menlo:h12
-set go-=T
-if has('gui_running')
-    set background=dark
-else
-    set background=light
-    :syntax enable
-endif
-"let g:molokai_original = 1
+" Hide toolbar
+set guioptions-=T
+
+:syntax enable
+
 set t_Co=256
+set background=dark
 colorscheme solarized
 
