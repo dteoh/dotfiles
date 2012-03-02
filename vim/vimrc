@@ -50,6 +50,10 @@ set formatoptions=qrn1
 " >= version 7.3 only
 "set colorcolumn=85
 
+if exists("&autochdir")
+    set autochdir
+endif
+
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
