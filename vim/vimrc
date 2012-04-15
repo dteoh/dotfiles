@@ -12,6 +12,7 @@ Bundle 'commentary.vim'
 Bundle 'delimitMate.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
+Bundle 'ervandew/supertab'
 
 " Programming languages and frameworks
 Bundle 'VimClojure'
