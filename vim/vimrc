@@ -23,6 +23,8 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-haml'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'beyondwords/vim-twig'
+Bundle 'rodjek/vim-puppet'
+Bundle 'fish.vim'
 
 filetype plugin indent on
 
