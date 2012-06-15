@@ -32,6 +32,15 @@ function git_info
     end
 end
 
+# Override built-in prompt_pwd
+function prompt_pwd
+    if test "$PWD" != "$HOME"
+        printf '%s' (echo $PWD|sed -e 's|/private||' -e "s|^$HOME|~|")
+    else
+        echo '~'
+    end
+end
+
 function fish_prompt
     if not set -q __prompt_hostname
         set -g __prompt_hostname (hostname|cut -d . -f 1)
