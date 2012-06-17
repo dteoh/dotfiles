@@ -47,4 +47,9 @@ function fish_prompt
 end
 
 set -xg PATH /usr/local/bin $PATH
-
+if test -d /usr/local/lib/node_modules
+    set -xg NODE_PATH /usr/local/lib/node_modules
+end
+if test -d ~/.rbenv/shims
+    set -xg PATH ~/.rbenv/shims $PATH
+end
