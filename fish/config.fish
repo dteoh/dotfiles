@@ -1,11 +1,3 @@
-# https://github.com/lunks/fish-nuggets/blob/master/functions/rvm.fish
-function rvm
-    set -l env_file (mktemp -t rvm.fish.XXXXXXXXXX)
-    bash -c 'source ~/.rvm/scripts/rvm; rvm "$@"; status=$?; env > "$0"; exit $status' $env_file $argv
-    and eval (grep '^rvm\|^[^=]*PATH' $env_file | sed '/^[^=]*PATH/y/:/ /; s/^/set -xg /; s/=/ /; s/$/ ;/')
-    rm -f $env_file
-end
-
 # https://github.com/lunks/fish-nuggets/blob/master/functions/is-git.fish
 function is_git
     env git rev-parse --git-dir ^/dev/null >/dev/null
@@ -54,5 +46,5 @@ function fish_prompt
     echo \n'$ '
 end
 
-set PATH /usr/local/bin /usr/local/sbin $PATH
+set -xg PATH /usr/local/bin $PATH
 
