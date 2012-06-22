@@ -1,0 +1,10 @@
+[user]
+	name = Douglas Teoh
+[color]
+	ui = always
+[alias]
+	st = status
+	ci = commit
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = /usr/bin/vim
