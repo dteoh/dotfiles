@@ -87,7 +87,7 @@ nnoremap <leader>t :NERDTreeToggle<CR>
 " Autosave on window focus loss
 au FocusLost * :wa
 
-set guifont=Menlo:h12
+set guifont=Bitstream\ Vera\ Sans\ Mono:h14
 " Hide toolbar
 set guioptions-=T
 
