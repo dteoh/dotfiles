@@ -14,3 +14,9 @@
 .*.sw[a-z]
 *.un~
 Session.vim
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea/
