@@ -14,6 +14,7 @@ Bundle 'delimitMate.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ervandew/supertab'
+Bundle 'Lokaltog/vim-easymotion'
 
 " Programming languages and frameworks
 Bundle 'VimClojure'
