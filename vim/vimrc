@@ -8,7 +8,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Editor enhancements
-Bundle 'ack.vim'
 Bundle 'commentary.vim'
 Bundle 'delimitMate.vim'
 Bundle 'altercation/vim-colors-solarized'
@@ -25,9 +24,6 @@ Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'beyondwords/vim-twig'
-Bundle 'rodjek/vim-puppet'
-Bundle 'fish.vim'
 
 filetype plugin indent on
 
