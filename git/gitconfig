@@ -10,6 +10,6 @@
 	excludesfile = ~/.gitignore_global
 	editor = /usr/bin/vim
 [push]
-	default = upstream
+	default = simple
 [include]
 	path = ~/.gitconfig.local
