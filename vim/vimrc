@@ -16,13 +16,12 @@ Bundle 'ervandew/supertab'
 Bundle 'Lokaltog/vim-easymotion'
 
 " Programming languages and frameworks
-Bundle 'VimClojure'
-Bundle 'vim-coffee-script'
 Bundle 'html5.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
+Bundle 'vim-coffee-script'
 Bundle 'vim-ruby/vim-ruby'
 
 " Local bundles; source it here or plugins don't get loaded
