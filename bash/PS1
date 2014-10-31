@@ -1,0 +1,13 @@
+# vi: set ft=sh :
+
+function parse_git_branch {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+function git_has_changes {
+    if [ -n "`git status -s 2> /dev/null`" ]; then
+        echo '*'
+    fi
+}
+
+PS1="\u@\h \w \$(parse_git_branch)\$(git_has_changes) \n\[\033[33m\]$\[\033[m\] "
