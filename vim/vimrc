@@ -26,8 +26,8 @@ Plugin 'vim-coffee-script'
 Plugin 'vim-ruby/vim-ruby'
 
 " Local bundles; source it here or plugins don't get loaded
-if filereadable($HOME . "/.vimrc.local_vundles")
-  source ~/.vimrc.local_vundles
+if filereadable($HOME . "/.vimrc.local_plugins")
+  source ~/.vimrc.local_plugins
 endif
 
 call vundle#end()
