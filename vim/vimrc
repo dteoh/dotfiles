@@ -8,12 +8,13 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Editor enhancements
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'commentary.vim'
 Bundle 'delimitMate.vim'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'scrooloose/nerdtree'
+Bundle 'editorconfig/editorconfig-vim'
 Bundle 'ervandew/supertab'
-Bundle 'Lokaltog/vim-easymotion'
+Bundle 'scrooloose/nerdtree'
 
 " Programming languages and frameworks
 Bundle 'html5.vim'
