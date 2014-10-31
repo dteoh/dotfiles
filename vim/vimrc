@@ -3,32 +3,34 @@ filetype on
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " Editor enhancements
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'commentary.vim'
-Bundle 'delimitMate.vim'
-Bundle 'editorconfig/editorconfig-vim'
-Bundle 'ervandew/supertab'
-Bundle 'scrooloose/nerdtree'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'commentary.vim'
+Plugin 'delimitMate.vim'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'ervandew/supertab'
+Plugin 'scrooloose/nerdtree'
 
 " Programming languages and frameworks
-Bundle 'html5.vim'
-Bundle 'pangloss/vim-javascript'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-rails'
-Bundle 'vim-coffee-script'
-Bundle 'vim-ruby/vim-ruby'
+Plugin 'html5.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-rails'
+Plugin 'vim-coffee-script'
+Plugin 'vim-ruby/vim-ruby'
 
 " Local bundles; source it here or plugins don't get loaded
 if filereadable($HOME . "/.vimrc.local_vundles")
   source ~/.vimrc.local_vundles
 endif
+
+call vundle#end()
 
 filetype plugin indent on
 
