@@ -1,6 +1,7 @@
 # vi: set ft=sh :
 
 alias ls='ls -G'
+alias ll='ls -lG'
 alias cls='clear'
 alias clr='clear'
 alias quit='exit'
