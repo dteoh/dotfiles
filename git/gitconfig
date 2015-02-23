@@ -13,3 +13,7 @@
 	default = simple
 [include]
 	path = ~/.gitconfig.local
+[rerere]
+	enabled = true
+[fetch]
+	prune = true
