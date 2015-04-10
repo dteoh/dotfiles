@@ -1,0 +1,6 @@
+set line-graphics = utf-8
+set tab-size = 4
+
+set main-view-date = relative
+set main-view-id =  yes
+set main-view-commit-title = graph:v1
