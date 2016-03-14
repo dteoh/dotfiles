@@ -62,6 +62,9 @@ if exists("&colorcolumn")
     set colorcolumn=85
 endif
 
+set wildmenu
+set wildmode=list:longest,full
+
 if exists("&autochdir")
     set autochdir
 endif
