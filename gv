@@ -4,5 +4,5 @@ if [ $# -eq 0 ]
 then
     gvim --servername GVIM
 else
-    gvim --servername GVIM --remote-tab-silent $*
+    gvim --servername GVIM --remote-tab-silent "$@"
 fi
