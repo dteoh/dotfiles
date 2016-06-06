@@ -5,7 +5,7 @@ function parse_git_branch {
 }
 
 function git_has_changes {
-    if [ -n "`git status -s 2> /dev/null`" ]; then
+    if [ -n "$(git status -s 2> /dev/null)" ]; then
         echo '*'
     fi
 }
