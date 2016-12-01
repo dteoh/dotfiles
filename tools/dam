@@ -8,6 +8,7 @@ OptionParser.new do |opts|
   opts.banner = 'Usage: dam [-n lines] file'
   opts.on('-n LINES', Integer, 'Number of lines to sample from the file') do |n|
     exit 1 if n < 0
+    exit if n == 0
     num_lines = n
   end
 end.parse!
