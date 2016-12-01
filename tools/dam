@@ -1,0 +1,62 @@
+#!/usr/bin/env ruby
+
+# The MIT License (MIT)
+
+# Copyright (c) 2016 Douglas Teoh
+
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files
+# (the "Software"), to deal in the Software without restriction,
+# including without limitation the rights to use, copy, modify, merge,
+# publish, distribute, sublicense, and/or sell copies of the Software,
+# and to permit persons to whom the Software is furnished to do so,
+# subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+# IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+# CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+# TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+# SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+require 'optparse'
+
+num_lines = 10
+
+OptionParser.new do |opts|
+  opts.banner = 'Usage: dam [-n lines] file'
+  opts.on('-n LINES', Integer, 'Number of lines to sample from the file') do |n|
+    exit 1 if n < 0
+    exit if n == 0
+    num_lines = n
+  end
+end.parse!
+
+filename = ARGV.pop
+exit 2 unless filename
+exit 2 unless File.exist? filename
+
+reservoir = []
+File.open(filename, mode='r') do |f|
+  i = -1
+  f.each do |line|
+    i = i + 1
+
+    if reservoir.size < num_lines
+      reservoir.push line
+    else
+      j = rand(0...i)
+      if j < num_lines
+        reservoir[j] = line
+      end
+    end
+  end
+end
+
+reservoir.each do |sample|
+  puts sample
+end
