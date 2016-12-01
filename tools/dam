@@ -1,0 +1,38 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+
+num_lines = 10
+
+OptionParser.new do |opts|
+  opts.banner = 'Usage: dam [-n lines] file'
+  opts.on('-n LINES', Integer, 'Number of lines to sample from the file') do |n|
+    exit 1 if n < 0
+    num_lines = n
+  end
+end.parse!
+
+filename = ARGV.pop
+exit 2 unless filename
+exit 2 unless File.exist? filename
+
+reservoir = []
+File.open(filename, mode='r') do |f|
+  i = -1
+  f.each do |line|
+    i = i + 1
+
+    if reservoir.size < num_lines
+      reservoir.push line
+    else
+      j = rand(0...i)
+      if j < num_lines
+        reservoir[j] = line
+      end
+    end
+  end
+end
+
+reservoir.each do |sample|
+  puts sample
+end
