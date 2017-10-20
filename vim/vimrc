@@ -16,6 +16,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
+Plugin 'Yggdroot/indentLine'
 
 " Programming languages and frameworks
 Plugin 'sheerun/vim-polyglot'
