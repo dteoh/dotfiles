@@ -18,13 +18,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 
 " Programming languages and frameworks
-Plugin 'html5.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-rails'
-Plugin 'vim-coffee-script'
-Plugin 'vim-ruby/vim-ruby'
+Plugin 'sheerun/vim-polyglot'
 
 " Local bundles; source it here or plugins don't get loaded
 if filereadable($HOME . "/.vimrc.local_plugins")
