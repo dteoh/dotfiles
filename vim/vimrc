@@ -8,7 +8,6 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 
 " Editor enhancements
-Plugin 'Lokaltog/vim-easymotion'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'commentary.vim'
 Plugin 'delimitMate.vim'
