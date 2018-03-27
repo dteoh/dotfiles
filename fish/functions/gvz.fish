@@ -1,6 +1,6 @@
 function gvz --description 'alias gvz=gv (fzf -q $argv)'
-    if count $argv > 1
-        gv (fzf -q $argv[2..-1]);
+    if test (count $argv) -gt 0
+        gv (fzf -q $argv);
     else
         gv (fzf);
     end
