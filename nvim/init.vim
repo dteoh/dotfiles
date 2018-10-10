@@ -39,6 +39,8 @@ set expandtab
 set textwidth=79
 set colorcolumn=+6
 
+set mouse=a
+
 set wildmode=list:longest,full
 
 nnoremap <up> <nop>
