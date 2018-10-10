@@ -62,6 +62,10 @@ vnoremap <F1> <ESC>
 
 nnoremap ; :
 
+" Easier copying to system clipboard
+vnoremap <leader>y "+y
+nnoremap <leader>y "+y
+
 " Removes trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
