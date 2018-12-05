@@ -9,6 +9,7 @@ Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Yggdroot/indentLine'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 if filereadable($HOME . "/.config/nvim/plugins.vim")
   source $HOME/.config/nvim/plugins.vim
@@ -68,6 +69,10 @@ nnoremap <leader>y "+y
 
 " Removes trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" Can use Tab to navigate popup completions
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " vim-sneak customizations
 let g:sneak#s_next = 1
