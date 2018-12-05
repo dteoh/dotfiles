@@ -5,7 +5,6 @@ Plug 'sgur/vim-editorconfig'
 Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
-Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Yggdroot/indentLine'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
