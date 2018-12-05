@@ -79,6 +79,9 @@ let g:sneak#s_next = 1
 " nerdtree customizations
 nnoremap <leader>t :NERDTreeToggle<CR>
 
+" Enable Deoplete
+let g:deoplete#enable_at_startup = 1
+
 if filereadable($HOME . "/.config/nvim/locals.vim")
   source $HOME/.config/nvim/locals.vim
 endif
