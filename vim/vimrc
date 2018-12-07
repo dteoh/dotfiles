@@ -1,70 +1,44 @@
-set nocompatible
-filetype on
-filetype off
+set encoding=utf8
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/vundle'
+Plug 'noahfrederick/vim-neovim-defaults'
+Plug 'sheerun/vim-polyglot'
 
-" Editor enhancements
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'commentary.vim'
-Plugin 'delimitMate.vim'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'ervandew/supertab'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Yggdroot/indentLine'
-
-" Programming languages and frameworks
-Plugin 'sheerun/vim-polyglot'
-
-" Local bundles; source it here or plugins don't get loaded
 if filereadable($HOME . "/.vimrc.local_plugins")
   source ~/.vimrc.local_plugins
 endif
 
-call vundle#end()
+call plug#end()
 
-if has('autocmd')
-  filetype plugin indent on
-endif
+filetype on
 
 set modelines=0
 
-set autoindent
+set showmode
 set smartindent
 set showmatch
-set showmode
-set showcmd
 set cursorline
 set number
-set ruler
 
 set backspace=indent,eol,start
 
 set list
 set listchars=tab:▸\ ,eol:¬
 
-set smarttab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
 
-set wrap
 set textwidth=79
-set formatoptions=qrn1
-if exists("&colorcolumn")
-  set colorcolumn=85
-endif
+" set colorcolumn=+6
 
-set wildmenu
+set scrolloff=3
+
+set mouse=a
+
 set wildmode=list:longest,full
-
-if exists("&autochdir")
-  set autochdir
-endif
 
 nnoremap <up> <nop>
 nnoremap <down> <nop>
@@ -86,30 +60,6 @@ nnoremap ; :
 " Removes trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
-" Toggle NERDTree
-nnoremap <leader>t :NERDTreeToggle<CR>
-
-if has("gui_macvim")
-  set guifont=Hack:h14
-  " Hide toolbar
-  set guioptions-=T
-  " Autosave on window focus loss
-  au FocusLost * :wa
-endif
-
-if has('syntax') && !exists('g:syntax_on')
-  syntax enable
-endif
-
-" Allow color schemes to do bright colors without forcing bold.
-if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
-  set t_Co=16
-endif
-
-set background=dark
-colorscheme solarized
-
-" Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
