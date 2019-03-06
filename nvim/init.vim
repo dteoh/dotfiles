@@ -77,7 +77,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 let g:sneak#s_next = 1
 
 " nerdtree customizations
-nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>t :NERDTreeToggle %<CR>
 
 " Enable Deoplete
 let g:deoplete#enable_at_startup = 1
