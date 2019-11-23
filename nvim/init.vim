@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'sheerun/vim-polyglot'
 Plug 'sgur/vim-editorconfig'
