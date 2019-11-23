@@ -1,1 +1,0 @@
-complete -c gv -e
