@@ -1,0 +1,9 @@
+[core]
+	pager = delta --diff-so-fancy
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	line-numbers = true
+	syntax-theme = Solarized (dark)

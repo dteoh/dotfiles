@@ -1,0 +1,8 @@
+[core]
+	editor = nvim
+
+[merge]
+	tool = vimdiff
+
+[mergetool "vimdiff"]
+	path = nvim
