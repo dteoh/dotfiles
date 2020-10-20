@@ -20,3 +20,8 @@ Session.vim
 *.ipr
 *.iws
 .idea/
+
+# Tooling
+.envrc
+.tool-versions
+.editorconfig
