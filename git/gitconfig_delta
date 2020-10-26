@@ -2,7 +2,7 @@
 	pager = delta --diff-so-fancy
 
 [interactive]
-	diffFilter = delta --diff-so-fancy
+	diffFilter = delta --color-only
 
 [delta]
 	line-numbers = true
