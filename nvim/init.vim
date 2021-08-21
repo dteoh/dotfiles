@@ -6,7 +6,6 @@ Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
 Plug 'Yggdroot/indentLine'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ms-jpq/chadtree', { 'on': ['CHADopen', 'CHADdeps'], 'branch': 'chad', 'do': 'python3 -m chadtree deps' }
 
 if filereadable($HOME . "/.config/nvim/plugins.vim")
