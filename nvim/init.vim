@@ -6,8 +6,8 @@ Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
 Plug 'Yggdroot/indentLine'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'ms-jpq/chadtree', { 'on': ['CHADopen', 'CHADdeps'], 'branch': 'chad', 'do': 'python3 -m chadtree deps' }
 
 if filereadable($HOME . "/.config/nvim/plugins.vim")
   source $HOME/.config/nvim/plugins.vim
@@ -75,8 +75,23 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " vim-sneak customizations
 let g:sneak#s_next = 1
 
-" nerdtree customizations
-nnoremap <leader>t :NERDTreeToggle %<CR>
+" CHADtree customizations
+lua << EOF
+vim.api.nvim_set_var("chadtree_settings", {
+  ["keymap.primary"] = {"o"},
+  ["keymap.tertiary"] = {"t"},
+  ["keymap.v_split"] = {"v"},
+  ["keymap.h_split"] = {"s"},
+  ["keymap.open_sys"] = {},
+  ["keymap.select"] = {},
+  ["keymap.delete"] = {},
+  ["keymap.trash"] = {},
+  ["keymap.clear_selection"] = {},
+  ["options.session"] = false,
+  ["theme.icon_glyph_set"] = "ascii"
+})
+EOF
+nnoremap <leader>t <cmd>CHADopen<cr>
 
 " Enable Deoplete
 let g:deoplete#enable_at_startup = 1
