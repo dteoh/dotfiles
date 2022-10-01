@@ -5,3 +5,5 @@ dteoh/fish-homebrew-asdf
 dteoh/fish-set-lc-all
 dteoh/fish-direnv
 dteoh/fish-terminal-title
+dteoh/fish-homebrew-apple-silicon
+jorgebucaran/fisher
