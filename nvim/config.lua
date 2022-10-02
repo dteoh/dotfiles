@@ -1,6 +1,8 @@
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
+require('Comment').setup()
+
 -- nvim-tree configuration
 require("nvim-tree").setup({
   respect_buf_cwd = true,

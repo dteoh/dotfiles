@@ -3,9 +3,10 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'gpanders/editorconfig.nvim'
 Plug 'justinmk/vim-sneak'
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'numToStr/Comment.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-commentary'
 Plug 'Yggdroot/indentLine'
 
 if filereadable($HOME . "/.config/nvim/plugins.vim")
