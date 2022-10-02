@@ -1,12 +1,12 @@
 call plug#begin(stdpath('data') . '/plugged')
 
-Plug 'sheerun/vim-polyglot'
-Plug 'sgur/vim-editorconfig'
+Plug 'gpanders/editorconfig.nvim'
 Plug 'justinmk/vim-sneak'
+Plug 'kyazdani42/nvim-tree.lua'
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
 Plug 'Yggdroot/indentLine'
-Plug 'kyazdani42/nvim-tree.lua'
 
 if filereadable($HOME . "/.config/nvim/plugins.vim")
   source $HOME/.config/nvim/plugins.vim
