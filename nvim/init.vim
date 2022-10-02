@@ -3,11 +3,11 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'gpanders/editorconfig.nvim'
 Plug 'justinmk/vim-sneak'
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'numToStr/Comment.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-endwise'
-Plug 'Yggdroot/indentLine'
 
 if filereadable($HOME . "/.config/nvim/plugins.vim")
   source $HOME/.config/nvim/plugins.vim
@@ -26,9 +26,6 @@ set cursorline
 set number
 
 set backspace=indent,eol,start
-
-set list
-set listchars=tab:▸\ ,eol:¬
 
 set tabstop=4
 set shiftwidth=4

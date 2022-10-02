@@ -3,6 +3,18 @@ vim.g.loaded_netrwPlugin = 1
 
 require('Comment').setup()
 
+-- indent-blankline setup
+
+vim.opt.list = true
+vim.opt.listchars:append "tab:▸ "
+vim.opt.listchars:append "trail:⋅"
+
+require('indent_blankline').setup({
+  char = '¦',
+  show_end_of_line = false,
+  show_first_indent_level = false,
+})
+
 -- nvim-tree configuration
 require("nvim-tree").setup({
   respect_buf_cwd = true,
