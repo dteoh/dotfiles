@@ -1,6 +1,26 @@
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- Removes trailing whitespace
+vim.keymap.set('n', '<leader>W', function ()
+  local num_lines = vim.api.nvim_buf_line_count(0)
+  if num_lines == 0 then
+    return
+  end
+
+  for i = 0, num_lines do
+    if i == num_lines then
+      return
+    end
+
+    local line = vim.api.nvim_buf_get_lines(0, i, i + 1, true)
+    local s, e = string.find(line[1], '%s+$')
+    if s then
+      vim.api.nvim_buf_set_text(0, i, s - 1, i, e, {})
+    end
+  end
+end)
+
 require('Comment').setup()
 
 -- indent-blankline setup

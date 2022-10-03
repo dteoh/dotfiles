@@ -62,9 +62,6 @@ nnoremap ; :
 vnoremap <leader>y "+y
 nnoremap <leader>y "+y
 
-" Removes trailing whitespace
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
-
 " Can use Tab to navigate popup completions
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
