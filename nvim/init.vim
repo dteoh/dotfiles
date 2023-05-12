@@ -1,6 +1,5 @@
 call plug#begin(stdpath('data') . '/plugged')
 
-Plug 'gpanders/editorconfig.nvim'
 Plug 'justinmk/vim-sneak'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'lukas-reineke/indent-blankline.nvim'
