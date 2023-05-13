@@ -97,9 +97,7 @@ require("nvim-tree").setup({
   },
 })
 
-local function leader_t ()
+vim.keymap.set('n', '<leader>t', function()
   local api = require('nvim-tree.api')
   api.tree.toggle()
-end
-
-vim.keymap.set('n', '<leader>t', leader_t)
+end)
