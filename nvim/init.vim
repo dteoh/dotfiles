@@ -14,13 +14,11 @@ endif
 
 call plug#end()
 
-filetype on
-
-" vim-sneak customizations
-let g:sneak#s_next = 1
-
 if filereadable($HOME . "/.config/nvim/config.lua")
   luafile $HOME/.config/nvim/config.lua
+endif
+if filereadable($HOME . "/.config/nvim/locals.lua")
+  luafile $HOME/.config/nvim/locals.lua
 endif
 
 if filereadable($HOME . "/.config/nvim/locals.vim")

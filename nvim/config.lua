@@ -1,3 +1,5 @@
+vim.cmd('filetype on')
+
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
@@ -121,3 +123,6 @@ vim.keymap.set('n', '<leader>t', function()
   local api = require('nvim-tree.api')
   api.tree.toggle()
 end)
+
+-- vim-sneak configuration
+vim.g['sneak#s_next'] = 1
