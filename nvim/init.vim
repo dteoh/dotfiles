@@ -38,8 +38,6 @@ set scrolloff=3
 
 set mouse=a
 
-set wildmode=list:longest,full
-
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
@@ -60,10 +58,6 @@ nnoremap ; :
 " Easier copying to system clipboard
 vnoremap <leader>y "+y
 nnoremap <leader>y "+y
-
-" Can use Tab to navigate popup completions
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " vim-sneak customizations
 let g:sneak#s_next = 1
