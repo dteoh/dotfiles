@@ -8,9 +8,14 @@ local DDC = {
   enable = function()
     vim.call('ddc#enable')
   end,
-  isVisible = function()
+  is_visible = function()
     return vim.fn.pumvisible() ~= 0
   end,
+  map = {
+    manual_complete = function()
+      vim.call('ddc#map#manual_complete')
+    end,
+  },
 }
 
 DDC.custom.patch_global('ui', 'native')
@@ -36,15 +41,36 @@ DDC.custom.patch_global('sourceParams', {
 })
 
 vim.keymap.set('i', '<TAB>', function ()
-  if DDC.isVisible() then
+  local cursorCol = vim.fn.col('.')
+  if cursorCol <= 1 then
+    return '<TAB>'
+  end
+
+  local cursorRow = vim.fn.line('.')
+  local textBeforeCursor = vim.api.nvim_buf_get_text(
+      0,
+      cursorRow - 1,
+      cursorCol - 2,
+      cursorRow - 1,
+      cursorCol - 1,
+      {})
+  local charExists, char = next(textBeforeCursor)
+  if charExists == nil then
+    return '<TAB>'
+  end
+  if string.match(char, '%s') ~= nil then
+    return '<TAB>'
+  end
+
+  if DDC.is_visible() then
     return '<Down>'
   else
-    vim.call('ddc#map#manual_complete')
+    DDC.map.manual_complete()
   end
 end, { expr = true })
 
 vim.keymap.set('i', '<S-TAB>', function ()
-  if DDC.isVisible() then
+  if DDC.is_visible() then
     return '<Up>'
   else
     return '<C-h>'
@@ -52,7 +78,7 @@ vim.keymap.set('i', '<S-TAB>', function ()
 end, { expr = true })
 
 vim.keymap.set('i', '<ESC>', function ()
-  if DDC.isVisible() then
+  if DDC.is_visible() then
     return '<C-e>'
   else
     return '<ESC>'
