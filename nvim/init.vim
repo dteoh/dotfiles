@@ -38,27 +38,6 @@ set scrolloff=3
 
 set mouse=a
 
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-nnoremap j gj
-nnoremap k gk
-
-inoremap <F1> <ESC>
-nnoremap <F1> <ESC>
-vnoremap <F1> <ESC>
-
-nnoremap ; :
-
-" Easier copying to system clipboard
-vnoremap <leader>y "+y
-nnoremap <leader>y "+y
-
 " vim-sneak customizations
 let g:sneak#s_next = 1
 

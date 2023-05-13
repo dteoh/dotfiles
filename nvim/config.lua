@@ -1,6 +1,21 @@
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- Disable arrow keys
+local arrowKeys = {'<up>' ,'<down>', '<left>', '<right>'}
+for i = 1, #arrowKeys do
+  vim.keymap.set({'i', 'n'}, arrowKeys[i], '<nop')
+end
+
+vim.keymap.set('n', 'j', 'gj')
+vim.keymap.set('n', 'k', 'gk')
+vim.keymap.set('n', ';', ':')
+
+vim.keymap.set({'i', 'n', 'v'}, '<F1>', '<ESC>')
+
+-- Easier copying to system clipboard
+vim.keymap.set({'n', 'v'}, '<leader>y', '"+y')
+
 -- Removes trailing whitespace
 vim.keymap.set('n', '<leader>W', function ()
   local num_lines = vim.api.nvim_buf_line_count(0)
