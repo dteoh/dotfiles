@@ -4,7 +4,7 @@ vim.g.loaded_netrwPlugin = 1
 -- Disable arrow keys
 local arrowKeys = {'<up>' ,'<down>', '<left>', '<right>'}
 for i = 1, #arrowKeys do
-  vim.keymap.set({'i', 'n'}, arrowKeys[i], '<nop')
+  vim.keymap.set({'i', 'n'}, arrowKeys[i], '<nop>')
 end
 
 vim.keymap.set('n', 'j', 'gj')
