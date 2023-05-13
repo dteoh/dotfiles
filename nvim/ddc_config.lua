@@ -20,7 +20,7 @@ local DDC = {
 
 DDC.custom.patch_global('ui', 'native')
 DDC.custom.patch_global('sources', {'around', 'buffer', 'treesitter'})
-DDC.custom.patch_global( 'sourceOptions', {
+DDC.custom.patch_global('sourceOptions', {
   around = { mark = '[A]' },
   buffer = { mark = '[B]' },
   treesitter = { mark = '[T]' },
