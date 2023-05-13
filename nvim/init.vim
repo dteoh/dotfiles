@@ -16,28 +16,6 @@ call plug#end()
 
 filetype on
 
-set modelines=0
-
-set showmode
-set smartindent
-set showmatch
-set cursorline
-set number
-
-set backspace=indent,eol,start
-
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-
-set textwidth=79
-set colorcolumn=+6
-
-set scrolloff=3
-
-set mouse=a
-
 " vim-sneak customizations
 let g:sneak#s_next = 1
 

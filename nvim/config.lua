@@ -1,6 +1,26 @@
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
+vim.o.modelines = 0
+vim.o.showmode = true
+vim.o.smartindent = true
+vim.o.showmatch = true
+vim.o.cursorline = true
+vim.o.number = true
+
+vim.o.backspace = 'indent,eol,start'
+
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
+vim.o.softtabstop = 4
+vim.o.expandtab = true
+
+vim.o.textwidth = 79
+vim.o.colorcolumn = '+6'
+
+vim.o.scrolloff = 3
+vim.o.mouse = 'a'
+
 -- Disable arrow keys
 local arrowKeys = {'<up>' ,'<down>', '<left>', '<right>'}
 for i = 1, #arrowKeys do
