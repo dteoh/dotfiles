@@ -52,10 +52,10 @@ cmp.setup({
       cmp.complete()
     end, {'i'}),
     ['<ESC>'] = cmp.mapping(function(fallback)
-      if cmp.abort() then 
+      if cmp.abort() then
         return
       end
-      if not fallback then 
+      if not fallback then
         vim.cmd('stopinsert')
       end
       fallback()
@@ -70,5 +70,10 @@ cmp.setup({
   },
   sources = {
     { name = 'fuzzy_buffer' }
-  }
+  },
+  confirmation = {
+    get_commit_characters = function(_)
+      return {'(', '.', '\'', '"', ':', '/', '-'}
+    end
+  },
 })
