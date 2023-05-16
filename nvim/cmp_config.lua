@@ -29,9 +29,10 @@ local function canShowCompletionAtCursor()
 end
 
 cmp.setup({
-  snippet = {
-    expand = function(args)
-    end,
+  confirmation = {
+    get_commit_characters = function(_)
+      return {'(', '.', '\'', '"', ':', '/', '-'}
+    end
   },
   mapping = {
     ['<S-TAB>'] = cmp.mapping(function(fallback)
@@ -69,20 +70,6 @@ cmp.setup({
       end
     end, {'i'}),
   },
-  sources = {
-    {
-      name = 'buffer',
-      option = {
-        get_bufnrs = function()
-          return vim.api.nvim_list_bufs()
-        end,
-        keyword_pattern = [[\k\+]],
-        max_indexed_line_length = 1024 * 5,
-      },
-    },
-    { name = 'fuzzy_buffer' },
-    { name = 'treesitter' },
-  },
   sorting = {
     priority_weight = 2,
     comparators = {
@@ -97,9 +84,35 @@ cmp.setup({
       compare.order,
     },
   },
-  confirmation = {
-    get_commit_characters = function(_)
-      return {'(', '.', '\'', '"', ':', '/', '-'}
-    end
+  sources = {
+    {
+      name = 'buffer',
+      keyword_length = 2,
+      max_item_count = 5,
+      priority = 30,
+      option = {
+        get_bufnrs = function()
+          return vim.api.nvim_list_bufs()
+        end,
+        keyword_pattern = [[\k\+]],
+        max_indexed_line_length = 1024 * 5,
+      },
+    },
+    { 
+      name = 'fuzzy_buffer',
+      keyword_length = 2,
+      max_item_count = 5,
+      priority = 20,
+    },
+    { 
+      name = 'treesitter' ,
+      keyword_length = 2,
+      max_item_count = 5,
+      priority = 10,
+    },
+  },
+  snippet = {
+    expand = function(args)
+    end,
   },
 })
