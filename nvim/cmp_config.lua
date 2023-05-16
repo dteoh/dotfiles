@@ -1,4 +1,5 @@
 local cmp = require('cmp')
+local compare = require('cmp.config.compare')
 local types = require('cmp.types')
 
 local function canShowCompletionAtCursor()
@@ -69,7 +70,31 @@ cmp.setup({
     end, {'i'}),
   },
   sources = {
-    { name = 'fuzzy_buffer' }
+    { name = 'fuzzy_buffer' },
+    { 
+      name = 'buffer',
+      option = {
+        get_bufnrs = function()
+          return vim.api.nvim_list_bufs()
+        end,
+        keyword_pattern = [[\k\+]],
+        max_indexed_line_length = 1024 * 5,
+      },
+    },
+  },
+  sorting = {
+    priority_weight = 2,
+    comparators = {
+      require('cmp_fuzzy_buffer.compare'),
+      compare.offset,
+      compare.exact,
+      compare.score,
+      compare.recently_used,
+      compare.kind,
+      compare.sort_text,
+      compare.length,
+      compare.order,
+    },
   },
   confirmation = {
     get_commit_characters = function(_)
