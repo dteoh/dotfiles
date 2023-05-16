@@ -70,8 +70,7 @@ cmp.setup({
     end, {'i'}),
   },
   sources = {
-    { name = 'fuzzy_buffer' },
-    { 
+    {
       name = 'buffer',
       option = {
         get_bufnrs = function()
@@ -81,6 +80,8 @@ cmp.setup({
         max_indexed_line_length = 1024 * 5,
       },
     },
+    { name = 'fuzzy_buffer' },
+    { name = 'treesitter' },
   },
   sorting = {
     priority_weight = 2,
