@@ -29,6 +29,9 @@ local function canShowCompletionAtCursor()
 end
 
 cmp.setup({
+  completion = {
+    keyword_pattern = [[\k\+]],
+  },
   confirmation = {
     get_commit_characters = function(_)
       return {'(', '.', '\'', '"', ':', '/', '-'}
@@ -70,6 +73,7 @@ cmp.setup({
       end
     end, {'i'}),
   },
+  preselect = cmp.PreselectMode.None,
   sorting = {
     priority_weight = 2,
     comparators = {
@@ -94,7 +98,6 @@ cmp.setup({
         get_bufnrs = function()
           return vim.api.nvim_list_bufs()
         end,
-        keyword_pattern = [[\k\+]],
         max_indexed_line_length = 1024 * 5,
       },
     },
