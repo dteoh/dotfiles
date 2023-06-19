@@ -60,10 +60,8 @@ cmp.setup({
       if cmp.abort() then
         return
       end
-      if not fallback then
-        vim.cmd('stopinsert')
-      end
       fallback()
+      vim.cmd('stopinsert')
     end, {'i'}),
     ['<CR>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
