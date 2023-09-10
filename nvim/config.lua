@@ -125,3 +125,6 @@ end)
 
 -- vim-sneak configuration
 vim.g['sneak#s_next'] = 1
+
+-- guess-indent configuration
+require('guess-indent').setup({})
