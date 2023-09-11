@@ -120,9 +120,11 @@ require("nvim-tree").setup({
 })
 
 vim.keymap.set('n', '<leader>t', function()
-  local api = require('nvim-tree.api')
-  api.tree.toggle()
+  vim.cmd("NvimTreeFindFileToggle")
 end)
 
 -- vim-sneak configuration
 vim.g['sneak#s_next'] = 1
+
+-- guess-indent configuration
+require('guess-indent').setup({})

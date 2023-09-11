@@ -7,6 +7,7 @@ Plug 'numToStr/Comment.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-endwise'
+Plug 'nmac427/guess-indent.nvim'
 
 if filereadable($HOME . "/.config/nvim/plugins.vim")
   source $HOME/.config/nvim/plugins.vim
