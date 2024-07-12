@@ -25,3 +25,4 @@ Session.vim
 .envrc
 .tool-versions
 .editorconfig
+.mise.toml

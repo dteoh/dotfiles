@@ -1,9 +1,10 @@
 oh-my-fish/theme-clearance
 jethrokuan/fzf
 jethrokuan/z
-dteoh/fish-homebrew-asdf
 dteoh/fish-set-lc-all
 dteoh/fish-direnv
 dteoh/fish-terminal-title
 dteoh/fish-homebrew-apple-silicon
 jorgebucaran/fisher
+dteoh/fish-macos-nix
+dteoh/fish-homebrew-mise
