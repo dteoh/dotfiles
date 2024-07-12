@@ -23,8 +23,9 @@ vim.o.colorcolumn = '+6'
 vim.o.scrolloff = 3
 vim.o.mouse = 'a'
 
--- Disable providers I won't ever use
-vim.g.loaded_perl_provider = false
+-- Disable providers not being used
+vim.g.loaded_ruby_provider = 0
+vim.g.loaded_perl_provider = 0
 
 -- Disable arrow keys
 local arrowKeys = {'<up>' ,'<down>', '<left>', '<right>'}
