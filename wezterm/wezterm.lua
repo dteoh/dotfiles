@@ -33,6 +33,16 @@ config.keys = {
         key = 'l',
         mods = 'SUPER|SHIFT',
         action = wezterm.action.RotatePanes 'CounterClockwise'
+    },
+    {
+        key = '[',
+        mods = 'SUPER',
+        action = wezterm.action.ActivatePaneDirection 'Prev'
+    },
+    {
+        key = ']',
+        mods = 'SUPER',
+        action = wezterm.action.ActivatePaneDirection 'Next'
     }
 }
 
