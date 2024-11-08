@@ -43,6 +43,16 @@ config.keys = {
         key = ']',
         mods = 'SUPER',
         action = wezterm.action.ActivatePaneDirection 'Next'
+    },
+    {
+        key = ',',
+        mods = 'SUPER|SHIFT',
+        action = wezterm.action.MoveTabRelative(-1)
+    },
+    {
+        key = '.',
+        mods = 'SUPER|SHIFT',
+        action = wezterm.action.MoveTabRelative(1)
     }
 }
 
