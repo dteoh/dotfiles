@@ -5,9 +5,6 @@ font-size = 16
 
 theme = Sonokai
 
-window-padding-x = 0
-window-padding-y = 0
-
 keybind = super+enter=new_split:down
 keybind = super+shift+enter=new_split:right
 
