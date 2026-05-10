@@ -1,0 +1,15 @@
+command = direct:/opt/homebrew/bin/fish -l
+
+font-family = Server Mono
+font-size = 16
+
+theme = Sonokai
+
+keybind = super+enter=new_split:down
+keybind = super+shift+enter=new_split:right
+
+keybind = super+[=goto_split:previous
+keybind = super+]=goto_split:next
+
+keybind = super+shift+comma=move_tab:-1
+keybind = super+shift+period=move_tab:1
