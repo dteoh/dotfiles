@@ -5,6 +5,9 @@ font-size = 16
 
 theme = Sonokai
 
+minimum-contrast = 1.2
+unfocused-split-opacity = 0.9
+
 keybind = super+enter=new_split:down
 keybind = super+shift+enter=new_split:right
 
